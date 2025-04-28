@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Noobio
         {
             Greeting();
             Gender();
-            Console.ReadLine();    
+            Console.ReadLine();
         }
 
         static void Greeting()
@@ -23,19 +24,23 @@ namespace Noobio
             Console.WriteLine($"Hello {name} Welcome to The Council");
         }
 
-        static bool Gender()
+        static void Gender()
         {
-            bool isGender = true;
-            if (isGender)
+            Console.Write("What is your prefered gender (Male/Female): ");
+            string gender = Console.ReadLine();
+
+            if (gender == "Male" || gender == "male")
             {
-                Console.Write("What is your gender? ");
-                string gender = Console.ReadLine();
-                Console.WriteLine("You are a Male");
-            } else
+                Console.WriteLine("You are a Male!");
+            }
+            else if (gender == "Female" || gender == "female")
             {
                 Console.WriteLine("You are a Female!");
             }
-            return isGender;
+            else
+            {
+                Console.WriteLine("We are not sure what you are!\n Please try again!");
+            }
         }
  
     }

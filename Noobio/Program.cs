@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,33 @@ namespace Noobio
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a numerical number: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Enter a numerical number again: ");
-            double num2 = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine(num1 + num2);
-
-            Console.ReadLine();
-            
+            Greeting();
+            Gender();
+            Console.ReadLine();    
         }
+
+        static void Greeting()
+        {
+            Console.Write("Please enter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello {name} Welcome to The Council");
+        }
+
+        static bool Gender()
+        {
+            bool isGender = true;
+            if (isGender)
+            {
+                Console.Write("What is your gender? ");
+                string gender = Console.ReadLine();
+                Console.WriteLine("You are a Male");
+            } else
+            {
+                Console.WriteLine("You are a Female!");
+            }
+            return isGender;
+        }
+ 
     }
 }
+ 

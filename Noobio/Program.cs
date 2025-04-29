@@ -37,8 +37,12 @@ namespace Noobio
             {
                 Console.WriteLine(number1 * number2);
             }
+            else
+            {
+                Console.WriteLine("You have entered an invalid operator!!!!!!!!!!!");
+            }
 
-            Console.ReadLine();
+                Console.ReadLine();
         }
 
         

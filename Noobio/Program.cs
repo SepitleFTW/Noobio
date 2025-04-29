@@ -12,37 +12,36 @@ namespace Noobio
     {
         static void Main(string[] args)
         {
-            Greeting();
-            Gender();
+            Console.Write("Enter a number: ");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter an operator: ");
+            string op = Convert.ToString(Console.ReadLine());
+
+            Console.Write("Enter a number again: ");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "+")
+            {
+                Console.WriteLine(number1 + number2);
+            }
+            else if (op == "-")
+            {
+                Console.WriteLine(number1 - number2);
+            }
+            else if (op == "/")
+            {
+                Console.WriteLine(number1 / number2);
+            }
+            else if (op == "*")
+            {
+                Console.WriteLine(number1 * number2);
+            }
+
             Console.ReadLine();
         }
 
-        static void Greeting()
-        {
-            Console.Write("Please enter your name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine($"Hello {name} Welcome to The Council");
-        }
-
-        static void Gender()
-        {
-            Console.Write("What is your prefered gender (Male/Female): ");
-            string gender = Console.ReadLine();
-
-            if (gender == "Male" || gender == "male")
-            {
-                Console.WriteLine("You are a Male!");
-            }
-            else if (gender == "Female" || gender == "female")
-            {
-                Console.WriteLine("You are a Female!");
-            }
-            else
-            {
-                Console.WriteLine("We are not sure what you are!\n Please try again!");
-            }
-        }
+        
  
     }
 }
- 

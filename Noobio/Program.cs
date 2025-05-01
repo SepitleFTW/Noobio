@@ -12,40 +12,12 @@ namespace Noobio
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            double number1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Enter an operator: ");
-            string op = Convert.ToString(Console.ReadLine());
-
-            Console.Write("Enter a number again: ");
-            double number2 = Convert.ToDouble(Console.ReadLine());
-
-            if (op == "+")
+           
+            for (int i = 1; i <=5; i++)
             {
-                Console.WriteLine(number1 + number2);
+                Console.WriteLine(i);
             }
-            else if (op == "-")
-            {
-                Console.WriteLine(number1 - number2);
-            }
-            else if (op == "/")
-            {
-                Console.WriteLine(number1 / number2);
-            }
-            else if (op == "*")
-            {
-                Console.WriteLine(number1 * number2);
-            }
-            else
-            {
-                Console.WriteLine("You have entered an invalid operator!!!!!!!!!!!");
-            }
-
-                Console.ReadLine();
+            Console.ReadLine();
         }
-
-        
- 
     }
 }

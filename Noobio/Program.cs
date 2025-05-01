@@ -12,12 +12,23 @@ namespace Noobio
     {
         static void Main(string[] args)
         {
-           
-            for (int i = 1; i <=5; i++)
+            //exception handling baby!!
+            try
             {
-                Console.WriteLine(i);
+                Console.Write("Enter a number: ");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter a second number: ");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(num1 / num2);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
             Console.ReadLine();
         }
+        
     }
 }
